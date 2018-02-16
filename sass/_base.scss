@@ -1,0 +1,36 @@
+//Color Varibles
+$color-white: #fdfdfd;
+$color-yellow: #efc62c;
+$color-light-yellow: #e0cb79;
+$color-grey: #dee5e7;
+$color-dark-grey: #3b3a3a;
+$color-light-grey: #a69f9e;
+
+//font variables
+$font-primary: 'Open Sans', sans-serif;
+
+//Prefixes
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: $font-primary;
+}
+//custom css starts
+.container{
+    display: grid;
+    grid-template-rows: 80vh repeat(8, min-content);
+    grid-row-gap: 25px;
+    grid-template-columns: 1fr [center-start]repeat(10, [col-start] minmax(min-content, 1fr) [col-end])[center-end] 1fr;
+}
